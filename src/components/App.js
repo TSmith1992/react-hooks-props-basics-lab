@@ -1,3 +1,4 @@
+  
 import React from "react";
 import NavBar from "./NavBar";
 import Home from "./Home";
@@ -11,8 +12,10 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home username={user.name} city={user.city}/>
+      <About bio={user.bio} 
+      gitLinks = {user.links.github}
+      linkedLinks ={user.links.linkedin}/>
     </div>
   );
 }
